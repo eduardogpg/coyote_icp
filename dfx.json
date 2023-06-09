@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "coyote_backend": {
+      "main": "src/coyote_backend/main.mo",
+      "type": "motoko"
+    },
+    "coyote_frontend": {
+      "dependencies": [
+        "coyote_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/coyote_frontend/src/index.html"
+      },
+      "source": [
+        "src/coyote_frontend/assets",
+        "dist/coyote_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
